@@ -34,7 +34,7 @@ class BinaryString
      * @param int $length (optional)
      * @return string
      */
-    public static function substring(string $str, int $start = 0, int $length = null): string
+    public static function substring(string $str, int $start = 0, ?int $length = null): string
     {
         // Premature optimization: cache the function_exists() result
         static $exists = null;

@@ -89,7 +89,7 @@ class Point implements PointInterface
      * @throws \RuntimeException    when either the curve does not contain the given coordinates or
      *                                      when order is not null and P(x, y) * order is not equal to infinity.
      */
-    public function __construct(GmpMathInterface $adapter, CurveFpInterface $curve, \GMP $x, \GMP $y, \GMP $order = null, bool $infinity = false)
+    public function __construct(GmpMathInterface $adapter, CurveFpInterface $curve, \GMP $x, \GMP $y, ?\GMP $order = null, bool $infinity = false)
     {
         $this->adapter    = $adapter;
         $this->modAdapter = $curve->getModAdapter();

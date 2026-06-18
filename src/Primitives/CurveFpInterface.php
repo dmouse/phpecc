@@ -51,7 +51,7 @@ interface CurveFpInterface
      * @param  \GMP $order
      * @return PointInterface
      */
-    public function getPoint(\GMP $x, \GMP $y, \GMP $order = null): PointInterface;
+    public function getPoint(\GMP $x, \GMP $y, ?\GMP $order = null): PointInterface;
 
     /**
      * @param bool $wasOdd
@@ -75,7 +75,7 @@ interface CurveFpInterface
      * @param  RandomNumberGeneratorInterface $randomGenerator
      * @return GeneratorPoint
      */
-    public function getGenerator(\GMP $x, \GMP $y, \GMP $order, RandomNumberGeneratorInterface $randomGenerator = null): GeneratorPoint;
+    public function getGenerator(\GMP $x, \GMP $y, \GMP $order, ?RandomNumberGeneratorInterface $randomGenerator = null): GeneratorPoint;
 
     /**
      * Checks whether the curve contains the given coordinates.

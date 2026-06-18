@@ -35,7 +35,7 @@ class GeneratorPoint extends Point
         \GMP $x,
         \GMP $y,
         \GMP $order,
-        RandomNumberGeneratorInterface $generator = null
+        ?RandomNumberGeneratorInterface $generator = null
     ) {
         $this->generator = $generator ?: RandomGeneratorFactory::getRandomGenerator();
         parent::__construct($adapter, $curve, $x, $y, $order);
