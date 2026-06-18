@@ -11,14 +11,12 @@ build:
         redis: false
         postgresql: false
         php:
-           version: 7.2
+           version: 8.4
            ini:
                'zend.assertions': '1'
                'assert.exception': '1'
     dependencies:
         override:
-            -
-                command: 'composer self-update --2'
             -
                 command: 'composer install'
     tests:
